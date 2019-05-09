@@ -2,6 +2,9 @@
     margin:0;
     border:0;
     box-sizing: border-box;
+    font-family: 'Dancing Script', cursive;
+    font-size:36px;
+    
 }
 .jumbotron{
     text-align:center;
@@ -19,6 +22,16 @@
 body {
     background-color: pink;
 }
+
+.header2{
+    background-image:url('../images/flower2.png');
+    min-height:300px;
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    color:#64EBFF;
+}
+
 .vid-container{
     text-align:center;
 }
