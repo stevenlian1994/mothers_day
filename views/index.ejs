@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="\stylesheets\style.css">
+    <script src= 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="jumbotron">
+        <div class="slideshow-container">
+                <div class="header elementToFadeInAndOut">
+                <h1>Alles Gute Zum Mutterstag!</h1>
+                </div>
+                <div class="header elementToFadeInAndOut">
+                <h1>母亲节快乐!</h1>
+                </div>
+                <div class="header elementToFadeInAndOut">
+                <h1>Chúc Mừng Ngày Của Mẹ!</h1>
+                </div>
+                <div class="header elementToFadeInAndOut">
+                <h1>Happy Mother's Day!</h1>
+                </div>
+        </div>
+    </div>
+    <div class="container">
+            <div class="row">
+              <div class="col">
+                1 of 3
+              </div>
+              <div class="col-6">
+                    <div class="vid-container">
+                        <video width="640" height="640*3/4" controls>
+                            <source src="images/testing1.mp4" type="video/mp4">
+                        </video>
+                    </div>
+              </div>
+              <div class="col">
+                3 of 3
+              </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    1 of 3
+                </div>
+                <div class="col-6">
+                    <div class="slideshow-container">
+                            <div class="mySlides elementToFadeInAndOut">
+                            <img src="images/mother_1.jpg" style="width:100%">
+                            <div class="text">Caption Text</div>
+                            </div>
+                            <div class="mySlides elementToFadeInAndOut">
+                            <img src="images/mother_2.jpg" style="width:100%">
+                            <div class="text">Caption Two</div>
+                            </div>
+                            <div class="mySlides elementToFadeInAndOut">
+                            <img src="images/mother_4.jpg" style="width:100%">
+                            <div class="text">Caption Three</div>
+                            </div>
+                            <div class="mySlides elementToFadeInAndOut">
+                            <img src="images/mother_7.jpg" style="width:100%">
+                            <div class="text">Caption Text</div>
+                            </div>
+                            <div class="mySlides elementToFadeInAndOut">
+                            <img src="images/mother_15.jpg" style="width:100%">
+                            <div class="text">Caption Two</div>
+                            </div>
+                            <div class="mySlides elementToFadeInAndOut">
+                            <img src="images/mother_12.jpg" style="width:100%">
+                            <div class="text">Caption Three</div>
+                            </div>
+                            
+                    </div>
+                </div>
+                <div class="col">
+                    3 of 3
+                </div>
+            </div>
+    </div>
+
+
+
+</body>
+<script>
+    var slideIndex = 0;
+    var headerIndex = 0;
+    showSlides();
+    showHeader();
+    function showHeader() {
+        var i;
+        var slides = document.getElementsByClassName("header");
+        for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+        }
+        headerIndex++;
+        if (headerIndex > slides.length) {headerIndex = 1}    
+        slides[headerIndex-1].style.display = "block";  
+        setTimeout(showHeader, 6000); // Change image every 6 seconds
+    }
+    
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}    
+        slides[slideIndex-1].style.display = "block";  
+        setTimeout(showSlides, 6000); // Change image every 6 seconds
+    }
+</script>
+</html>
